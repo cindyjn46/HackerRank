@@ -1,0 +1,22 @@
+from collections import OrderedDict  
+
+def merge_the_tools(string, k):
+    list = []
+    q = len(string)/k   #round  
+    a = 0 
+    b = k
+    for j in range(0,int(q)):
+        #for k in range(0,len(string)):
+        s = string[a:b]
+        list.append(s)
+        a += k 
+        b += k
+    #print(q)    
+    for s in list:
+        print("".join(OrderedDict.fromkeys(s)))
+  
+    # your code goes here
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
